@@ -1,0 +1,117 @@
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/jupyter_cache/executors/utils.py", line 56, in single_nb_execution
+    record_timing=False,
+  File "/usr/local/lib/python3.7/dist-packages/nbclient/client.py", line 1204, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/usr/local/lib/python3.7/dist-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/usr/local/lib/python3.7/dist-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 587, in run_until_complete
+    return future.result()
+  File "/usr/local/lib/python3.7/dist-packages/nbclient/client.py", line 664, in async_execute
+    cell, index, execution_count=self.code_cells_executed + 1
+  File "/usr/local/lib/python3.7/dist-packages/nbclient/client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/usr/local/lib/python3.7/dist-packages/nbclient/client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# interval equal-frequency
+# ef = equal-frequency
+
+# label kategori
+label = ["Sedikit Lebar", "Lebar", "Sangat Lebar"]
+# Untuk menghitung banyaknya kategori label
+jumlah_kategori = len(label)
+
+# untuk menghitung interval equal-frequency
+data_lebarsepal_ef = pd.qcut(lebar_sepal, jumlah_kategori, label)
+jumlahdata_kategori_lebarsepal_ef = data_lebarsepal_ef.value_counts()
+jumlahdata_interval_lebarsepal_ef = pd.qcut(lebar_sepal, jumlah_kategori).value_counts()
+------------------
+
+[0;31m[0m
+[0;31mTypeError[0mTraceback (most recent call last)
+[0;32m<ipython-input-24-c7f73cd77340>[0m in [0;36m<module>[0;34m[0m
+[1;32m      8[0m [0;34m[0m[0m
+[1;32m      9[0m [0;31m# untuk menghitung interval equal-frequency[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 10[0;31m [0mdata_lebarsepal_ef[0m [0;34m=[0m [0mpd[0m[0;34m.[0m[0mqcut[0m[0;34m([0m[0mlebar_sepal[0m[0;34m,[0m [0mjumlah_kategori[0m[0;34m,[0m [0mlabel[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     11[0m [0mjumlahdata_kategori_lebarsepal_ef[0m [0;34m=[0m [0mdata_lebarsepal_ef[0m[0;34m.[0m[0mvalue_counts[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     12[0m [0mjumlahdata_interval_lebarsepal_ef[0m [0;34m=[0m [0mpd[0m[0;34m.[0m[0mqcut[0m[0;34m([0m[0mlebar_sepal[0m[0;34m,[0m [0mjumlah_kategori[0m[0;34m)[0m[0;34m.[0m[0mvalue_counts[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.7/dist-packages/pandas/core/reshape/tile.py[0m in [0;36mqcut[0;34m(x, q, labels, retbins, precision, duplicates)[0m
+[1;32m    369[0m     [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    370[0m         [0mquantiles[0m [0;34m=[0m [0mq[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 371[0;31m     [0mbins[0m [0;34m=[0m [0malgos[0m[0;34m.[0m[0mquantile[0m[0;34m([0m[0mx[0m[0;34m,[0m [0mquantiles[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    372[0m     fac, bins = _bins_to_cuts(
+[1;32m    373[0m         [0mx[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.7/dist-packages/pandas/core/algorithms.py[0m in [0;36mquantile[0;34m(x, q, interpolation_method)[0m
+[1;32m   1158[0m     [0mx[0m [0;34m=[0m [0mx[0m[0;34m[[0m[0;34m~[0m[0mmask[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
+[1;32m   1159[0m [0;34m[0m[0m
+[0;32m-> 1160[0;31m     [0mvalues[0m [0;34m=[0m [0mnp[0m[0;34m.[0m[0msort[0m[0;34m([0m[0mx[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   1161[0m [0;34m[0m[0m
+[1;32m   1162[0m     [0;32mdef[0m [0m_interpolate[0m[0;34m([0m[0ma[0m[0;34m,[0m [0mb[0m[0;34m,[0m [0mfraction[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m<__array_function__ internals>[0m in [0;36msort[0;34m(*args, **kwargs)[0m
+
+[0;32m/usr/local/lib/python3.7/dist-packages/numpy/core/fromnumeric.py[0m in [0;36msort[0;34m(a, axis, kind, order)[0m
+[1;32m    996[0m     [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    997[0m         [0ma[0m [0;34m=[0m [0masanyarray[0m[0;34m([0m[0ma[0m[0;34m)[0m[0;34m.[0m[0mcopy[0m[0;34m([0m[0morder[0m[0;34m=[0m[0;34m"K"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 998[0;31m     [0ma[0m[0;34m.[0m[0msort[0m[0;34m([0m[0maxis[0m[0;34m=[0m[0maxis[0m[0;34m,[0m [0mkind[0m[0;34m=[0m[0mkind[0m[0;34m,[0m [0morder[0m[0;34m=[0m[0morder[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    999[0m     [0;32mreturn[0m [0ma[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   1000[0m [0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.7/dist-packages/pandas/core/ops/common.py[0m in [0;36mnew_method[0;34m(self, other)[0m
+[1;32m     67[0m         [0mother[0m [0;34m=[0m [0mitem_from_zerodim[0m[0;34m([0m[0mother[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     68[0m [0;34m[0m[0m
+[0;32m---> 69[0;31m         [0;32mreturn[0m [0mmethod[0m[0;34m([0m[0mself[0m[0;34m,[0m [0mother[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     70[0m [0;34m[0m[0m
+[1;32m     71[0m     [0;32mreturn[0m [0mnew_method[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.7/dist-packages/pandas/core/arraylike.py[0m in [0;36m__lt__[0;34m(self, other)[0m
+[1;32m     38[0m     [0;34m@[0m[0munpack_zerodim_and_defer[0m[0;34m([0m[0;34m"__lt__"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     39[0m     [0;32mdef[0m [0m__lt__[0m[0;34m([0m[0mself[0m[0;34m,[0m [0mother[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 40[0;31m         [0;32mreturn[0m [0mself[0m[0;34m.[0m[0m_cmp_method[0m[0;34m([0m[0mother[0m[0;34m,[0m [0moperator[0m[0;34m.[0m[0mlt[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     41[0m [0;34m[0m[0m
+[1;32m     42[0m     [0;34m@[0m[0munpack_zerodim_and_defer[0m[0;34m([0m[0;34m"__le__"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.7/dist-packages/pandas/core/series.py[0m in [0;36m_cmp_method[0;34m(self, other, op)[0m
+[1;32m   5500[0m [0;34m[0m[0m
+[1;32m   5501[0m         [0;32mwith[0m [0mnp[0m[0;34m.[0m[0merrstate[0m[0;34m([0m[0mall[0m[0;34m=[0m[0;34m"ignore"[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m-> 5502[0;31m             [0mres_values[0m [0;34m=[0m [0mops[0m[0;34m.[0m[0mcomparison_op[0m[0;34m([0m[0mlvalues[0m[0;34m,[0m [0mrvalues[0m[0;34m,[0m [0mop[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   5503[0m [0;34m[0m[0m
+[1;32m   5504[0m         [0;32mreturn[0m [0mself[0m[0;34m.[0m[0m_construct_result[0m[0;34m([0m[0mres_values[0m[0;34m,[0m [0mname[0m[0;34m=[0m[0mres_name[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.7/dist-packages/pandas/core/ops/array_ops.py[0m in [0;36mcomparison_op[0;34m(left, right, op)[0m
+[1;32m    268[0m     ):
+[1;32m    269[0m         [0;31m# Call the method on lvalues[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 270[0;31m         [0mres_values[0m [0;34m=[0m [0mop[0m[0;34m([0m[0mlvalues[0m[0;34m,[0m [0mrvalues[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    271[0m [0;34m[0m[0m
+[1;32m    272[0m     [0;32melif[0m [0mis_scalar[0m[0;34m([0m[0mrvalues[0m[0;34m)[0m [0;32mand[0m [0misna[0m[0;34m([0m[0mrvalues[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.7/dist-packages/pandas/core/ops/common.py[0m in [0;36mnew_method[0;34m(self, other)[0m
+[1;32m     67[0m         [0mother[0m [0;34m=[0m [0mitem_from_zerodim[0m[0;34m([0m[0mother[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     68[0m [0;34m[0m[0m
+[0;32m---> 69[0;31m         [0;32mreturn[0m [0mmethod[0m[0;34m([0m[0mself[0m[0;34m,[0m [0mother[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     70[0m [0;34m[0m[0m
+[1;32m     71[0m     [0;32mreturn[0m [0mnew_method[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.7/dist-packages/pandas/core/arrays/categorical.py[0m in [0;36mfunc[0;34m(self, other)[0m
+[1;32m    173[0m                 [0;32mreturn[0m [0mret[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    174[0m             [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 175[0;31m                 [0;32mreturn[0m [0mops[0m[0;34m.[0m[0minvalid_comparison[0m[0;34m([0m[0mself[0m[0;34m,[0m [0mother[0m[0;34m,[0m [0mop[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    176[0m         [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    177[0m             [0;31m# allow categorical vs object dtype array comparisons for equality[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.7/dist-packages/pandas/core/ops/invalid.py[0m in [0;36minvalid_comparison[0;34m(left, right, op)[0m
+[1;32m     32[0m     [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     33[0m         [0mtyp[0m [0;34m=[0m [0mtype[0m[0;34m([0m[0mright[0m[0;34m)[0m[0;34m.[0m[0m__name__[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 34[0;31m         [0;32mraise[0m [0mTypeError[0m[0;34m([0m[0;34mf"Invalid comparison between dtype={left.dtype} and {typ}"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     35[0m     [0;32mreturn[0m [0mres_values[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     36[0m [0;34m[0m[0m
+
+[0;31mTypeError[0m: Invalid comparison between dtype=category and float
+TypeError: Invalid comparison between dtype=category and float
+
