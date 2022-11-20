@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>STATISTIK DISKRIPTIF &#8212; Zakkiya Fitri Nur Sa&#39;adah</title>
+    <title>&lt;no title&gt; &#8212; Zakkiya Fitri Nur Sa&#39;adah</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,12 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Deskritisasi" href="tugas2.html" />
-    <link rel="prev" title="Welcome to your Jupyter Book" href="intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -120,9 +116,9 @@ const thebe_selector_output = ".output, .cell_output"
   Data Mining
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks.html">
    STATISTIK DISKRIPTIF
   </a>
  </li>
@@ -212,7 +208,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://colab.research.google.com/github/zakkiya/datamining/blob/gh-pages/_sources/notebooks.ipynb"
+        <a href="https://colab.research.google.com/github/zakkiya/datamining/blob/gh-pages/_sources/tugas9.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -272,7 +268,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/zakkiya/datamining/issues/new?title=Issue%20on%20page%20%2Fnotebooks.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/zakkiya/datamining/issues/new?title=Issue%20on%20page%20%2Ftugas9.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -300,7 +296,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/notebooks.ipynb"
+        <a href="_sources/tugas9.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -337,23 +333,50 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>STATISTIK DISKRIPTIF</h1>
+                <h1><no title></h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -361,31 +384,57 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="statistik-diskriptif">
-<h1>STATISTIK DISKRIPTIF<a class="headerlink" href="#statistik-diskriptif" title="Permalink to this headline">#</a></h1>
-<p>Statistik deskriptif berkaitan dengan deskripsi data, menggambarkan informasi dari suatu data tersebut misalnya rata-rata, median, modus (mode), standar deviasi dan varian dari sekumpulan data yang dapat dianalisa dan divisualisasikan dengan tabel dan grafik agar mudah dibaca.</p>
-<p>Pandas adalah salah satu modul paket pada python yang digunakan untuk melakukan pengolahan data statistik yang fleksibel, ekspresif dan cepat.</p>
-<div class="cell docutils container">
+  <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># memanggil modul pandas</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="c1">#membaca data dari url</span>
-<span class="n">url</span><span class="o">=</span><span class="s2">&quot;https://raw.githubusercontent.com/Opensourcefordatascience/Data-sets/master/crop_yield.csv&quot;</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_regression</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span>
+<span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">make_regression</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">n_features</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">noise</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">reg</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+<span class="n">reg</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+
+<span class="n">reg</span><span class="o">.</span><span class="n">coef_</span>
+
+<span class="n">reg</span><span class="o">.</span><span class="n">intercept_</span>
+
+<span class="n">reg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">3</span><span class="p">]]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([249.10558816])
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#menampilkan data (disini kolom yg bertipe numerik adalah kolom yield)</span>
-<span class="n">data</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="n">X_test</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">y</span><span class="o">=</span><span class="n">y_test</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;X&#39;</span><span class="p">:</span> <span class="n">x</span><span class="p">,</span> 
+        <span class="s1">&#39;Y&#39;</span> <span class="p">:</span> <span class="n">y</span><span class="p">}</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-ed2c151b-afdc-4dcb-8310-a5b69fead428">
+  <div id="df-202d7a1c-7b0f-4562-8eaa-a92c799a2930">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -405,136 +454,115 @@ title="Print to PDF"
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Fert</th>
-      <th>Water</th>
-      <th>Yield</th>
+      <th>X</th>
+      <th>Y</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>A</td>
-      <td>High</td>
-      <td>27.4</td>
+      <td>[-0.8799362550302456]</td>
+      <td>-90.595341</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>A</td>
-      <td>High</td>
-      <td>33.6</td>
+      <td>[-0.907431110486588]</td>
+      <td>-77.275701</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>A</td>
-      <td>High</td>
-      <td>29.8</td>
+      <td>[0.24325208973009627]</td>
+      <td>14.481926</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>A</td>
-      <td>High</td>
-      <td>35.2</td>
+      <td>[1.3750817833297295]</td>
+      <td>109.966781</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>A</td>
-      <td>High</td>
-      <td>33.0</td>
+      <td>[-1.323144308023275]</td>
+      <td>-96.232853</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>B</td>
-      <td>High</td>
-      <td>34.8</td>
+      <td>[-0.510276378195357]</td>
+      <td>-25.547403</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>B</td>
-      <td>High</td>
-      <td>27.0</td>
+      <td>[-0.16052283339399875]</td>
+      <td>-12.334693</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>B</td>
-      <td>High</td>
-      <td>30.2</td>
+      <td>[-1.6258324889960054]</td>
+      <td>-144.822429</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>B</td>
-      <td>High</td>
-      <td>30.8</td>
+      <td>[-0.6324561080323616]</td>
+      <td>-56.450153</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>B</td>
-      <td>High</td>
-      <td>26.4</td>
+      <td>[1.118701731991743]</td>
+      <td>104.142263</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>A</td>
-      <td>Low</td>
-      <td>32.0</td>
+      <td>[-0.033836023494665635]</td>
+      <td>-10.796554</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>A</td>
-      <td>Low</td>
-      <td>32.2</td>
+      <td>[1.0317980500552004]</td>
+      <td>86.207595</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>A</td>
-      <td>Low</td>
-      <td>26.0</td>
+      <td>[1.7684062625820967]</td>
+      <td>133.467832</td>
     </tr>
     <tr>
       <th>13</th>
-      <td>A</td>
-      <td>Low</td>
-      <td>33.4</td>
+      <td>[-1.0294596420071944]</td>
+      <td>-102.956674</td>
     </tr>
     <tr>
       <th>14</th>
-      <td>A</td>
-      <td>Low</td>
-      <td>26.4</td>
+      <td>[-0.8040960188185892]</td>
+      <td>-54.947609</td>
     </tr>
     <tr>
       <th>15</th>
-      <td>B</td>
-      <td>Low</td>
-      <td>26.8</td>
+      <td>[-1.2807181274330393]</td>
+      <td>-118.848357</td>
     </tr>
     <tr>
       <th>16</th>
-      <td>B</td>
-      <td>Low</td>
-      <td>23.2</td>
+      <td>[-0.5827258414929005]</td>
+      <td>-62.280795</td>
     </tr>
     <tr>
       <th>17</th>
-      <td>B</td>
-      <td>Low</td>
-      <td>29.4</td>
+      <td>[-1.2864330671683535]</td>
+      <td>-99.076397</td>
     </tr>
     <tr>
       <th>18</th>
-      <td>B</td>
-      <td>Low</td>
-      <td>19.4</td>
+      <td>[-0.036796875771292446]</td>
+      <td>2.738242</td>
     </tr>
     <tr>
       <th>19</th>
-      <td>B</td>
-      <td>Low</td>
-      <td>23.8</td>
+      <td>[-1.4811928876932359]</td>
+      <td>-136.633008</td>
     </tr>
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-ed2c151b-afdc-4dcb-8310-a5b69fead428')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-202d7a1c-7b0f-4562-8eaa-a92c799a2930')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -585,12 +613,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-ed2c151b-afdc-4dcb-8310-a5b69fead428 button.colab-df-convert');
+          document.querySelector('#df-202d7a1c-7b0f-4562-8eaa-a92c799a2930 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-ed2c151b-afdc-4dcb-8310-a5b69fead428');
+          const element = document.querySelector('#df-202d7a1c-7b0f-4562-8eaa-a92c799a2930');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -611,234 +639,51 @@ title="Print to PDF"
   </div>
 </div></div>
 </div>
-<ol class="simple">
-<li><p>Mean
-Mean adalah nilai rata-rata dari kelompok data.</p></li>
-</ol>
-<p>Rumus Mean :</p>
-<div class="math notranslate nohighlight">
-\[Mean= \frac{x_{1}+x_{2}+x_{3}+...+x_{n}}{n}\]</div>
-<blockquote>
-<div><p>Mean = rata-rata</p>
-</div></blockquote>
-<blockquote>
-<div><p><span class="math notranslate nohighlight">\(x_{1}\)</span> = nilai data ke-1</p>
-</div></blockquote>
-<blockquote>
-<div><p><span class="math notranslate nohighlight">\(x_{n}\)</span> = nilai data ke-n</p>
-</div></blockquote>
-<blockquote>
-<div><p><span class="math notranslate nohighlight">\(n_{}\)</span> = banyaknya data</p>
-</div></blockquote>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">statistics</span> <span class="k">as</span> <span class="nn">st</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">st</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">Yield</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">reg</span><span class="o">.</span><span class="n">coef_</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>29.04
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([83.83211183])
 </pre></div>
 </div>
 </div>
 </div>
-<ol class="simple">
-<li><p>Median</p></li>
-</ol>
-<p>median adalah nilai tengah data setelah diurutkan.</p>
-<p>Rumus Median =</p>
-<p>Rumus jika jumlah data ganjil :</p>
-<blockquote>
-<div><div class="math notranslate nohighlight">
-\[M_{e}=\frac{X(n+1)}{2}\]</div>
-</div></blockquote>
-<p>Rumus jika jumlah data genap :</p>
-<blockquote>
-<div><div class="math notranslate nohighlight">
-\[M_{e}=\frac{X_{\frac{n}{2}}+X(_{\frac{n}{2}+1})}{2}\]</div>
-</div></blockquote>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">st</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">Yield</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">reg</span><span class="o">.</span><span class="n">intercept_</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>29.6
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-2.3907473186416865
 </pre></div>
 </div>
 </div>
 </div>
-<ol class="simple">
-<li><p>Modus</p></li>
-</ol>
-<p>Modus adalah nilai yang sering muncul dalam suatu kelompok data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">st</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">Yield</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pyplot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span><span class="n">y_test</span><span class="p">)</span>
+<span class="n">Y_plot</span> <span class="o">=</span> <span class="n">reg</span><span class="o">.</span><span class="n">coef_X_test</span><span class="o">.</span><span class="n">reg</span><span class="o">.</span><span class="n">Intercept_</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>26.4
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">AttributeError</span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">7</span><span class="o">-</span><span class="mi">57</span><span class="n">a86a2e7b39</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">pyplot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span><span class="n">y_test</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">Y_plot</span> <span class="o">=</span> <span class="n">reg</span><span class="o">.</span><span class="n">coef_X_test</span><span class="o">.</span><span class="n">reg</span><span class="o">.</span><span class="n">Intercept_</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">pyplot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="ne">AttributeError</span>: &#39;LinearRegression&#39; object has no attribute &#39;coef_X_test&#39;
 </pre></div>
 </div>
+<img alt="_images/tugas9_6_1.png" src="_images/tugas9_6_1.png" />
 </div>
 </div>
-<ol class="simple">
-<li><p>Varian</p></li>
-</ol>
-<p>varian adalah rata-rata dari hitung penyimpangan kuadrat setiap data terhadap rata-rata hitungnya</p>
-<p>Rumus Varian =</p>
-<div class="math notranslate nohighlight">
-\[s^{2}=\frac{n\sum_{i=1}^{n}x_{i}^{2}-(\sum_{i=1}^{2}x_{1})^{2}}{n(n-1)}\]</div>
-<p><span class="math notranslate nohighlight">\(s^{2}\)</span> = varian</p>
-<p><span class="math notranslate nohighlight">\(x_{i}\)</span> = nilai x ke-i</p>
-<p><span class="math notranslate nohighlight">\(n\)</span> = ukuran sampel</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">Yield</span><span class="o">.</span><span class="n">var</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>17.89726315789474
-</pre></div>
-</div>
-</div>
-</div>
-<ol class="simple">
-<li><p>Kuartil</p></li>
-</ol>
-<p>kuartil adalah nilai-nilai yang membagi data yang telah diurutkan kedalam 4 bagian yang sama besar. Kuartil dinotasikan dengan notasi <span class="math notranslate nohighlight">\(Q\)</span>. Kuartil terdiri dari 3, yaitu kuartil pertama (<span class="math notranslate nohighlight">\(Q_{1}\)</span>), kuartil kedua (<span class="math notranslate nohighlight">\(Q_{2}\)</span>), dan kuartil ketiga (<span class="math notranslate nohighlight">\(Q_{3}\)</span>).*</p>
-<blockquote>
-<div><p>Rumus kuartil data tunggal:
-Untuk banyaknya data <span class="math notranslate nohighlight">\((n)\)</span> ganjil dan <span class="math notranslate nohighlight">\(n+1\)</span> habis dibagi 4.</p>
-</div></blockquote>
-<blockquote>
-<div><div class="math notranslate nohighlight">
-\[Q_{1}=x_{(\frac{n+1}{4})}\]</div>
-</div></blockquote>
-<blockquote>
-<div><div class="math notranslate nohighlight">
-\[Q_{2}=x_{(\frac{2(n+1)}{4})}\]</div>
-</div></blockquote>
-<blockquote>
-<div><div class="math notranslate nohighlight">
-\[Q_{3}=x_{(\frac{3(n+1)}{4})}\]</div>
-</div></blockquote>
-<p>Untuk banyaknya data <span class="math notranslate nohighlight">\((n)\)</span> ganjil dan <span class="math notranslate nohighlight">\(n+1\)</span> tidak habis dibagi 4.</p>
-<blockquote>
-<div><div class="math notranslate nohighlight">
-\[Q_{1}=\frac{x_{(\frac{(n-1)}{4})}+x_{(\frac{(n+3)}{4})}}{2}\]</div>
-</div></blockquote>
-<blockquote>
-<div><div class="math notranslate nohighlight">
-\[Q_{2}={x_{(\frac{2(n+1)}{4})}}\]</div>
-</div></blockquote>
-<blockquote>
-<div><div class="math notranslate nohighlight">
-\[Q_{3}=\frac{x_{(\frac{(3n+1)}{4})}+x_{(\frac{(3n+5)}{4})}}{2}\]</div>
-</div></blockquote>
-<p>Kuartil untuk banyaknya data <span class="math notranslate nohighlight">\((n)\)</span> genap dan habis dibagi 4.</p>
-<blockquote>
-<div><div class="math notranslate nohighlight">
-\[Q_{1}=\frac{x(\frac{n}{4})+x(\frac{n}{4}+1)}{2}\]</div>
-</div></blockquote>
-<blockquote>
-<div><div class="math notranslate nohighlight">
-\[Q_{2}=\frac{x(\frac{n}{2})+x(\frac{n}{2}+1)}{2}\]</div>
-</div></blockquote>
-<blockquote>
-<div><div class="math notranslate nohighlight">
-\[Q_{3}=\frac{x(\frac{3n}{4})+x(\frac{3n}{4}+1)}{2}\]</div>
-</div></blockquote>
-<blockquote>
-<div><p>Kuartil untuk banyaknya data <span class="math notranslate nohighlight">\((n)\)</span> genap dan tidak habis dibagi 4.</p>
-</div></blockquote>
-<blockquote>
-<div><div class="math notranslate nohighlight">
-\[Q_{1}=x_{(\frac{n+2}{4})}\]</div>
-</div></blockquote>
-<blockquote>
-<div><div class="math notranslate nohighlight">
-\[Q_{2}=\frac{x_{(\frac{n}{2})}+x_{(\frac{n}{2}+1)}}{2}\]</div>
-</div></blockquote>
-<blockquote>
-<div><div class="math notranslate nohighlight">
-\[Q_{3}=x_{(\frac{3n+2}{4})}\]</div>
-</div></blockquote>
-<p>Rumus kuartil pada data berkelompok</p>
-<blockquote>
-<div><div class="math notranslate nohighlight">
-\[Q_{i}=bb_{Qi}+\frac{\frac{i}{4}n-f_{kjs}}{f_{Qi}}.p\]</div>
-</div></blockquote>
-<p><span class="math notranslate nohighlight">\(i\)</span> = kuartil ke-i</p>
-<p><span class="math notranslate nohighlight">\(bb_{Qi}\)</span> = batas bawah kelas kuartil ke-i</p>
-<p><span class="math notranslate nohighlight">\(n\)</span> = banyaknya data</p>
-<p><span class="math notranslate nohighlight">\(f_{kjs}\)</span> = frekuensi kumulatif sebelum kelas kuartil ke-i</p>
-<p><span class="math notranslate nohighlight">\(f_{Qi}\)</span> = frekuensi kelas kuartil ke-i</p>
-<p><span class="math notranslate nohighlight">\(p\)</span> = panjang kelas</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">Yield</span><span class="o">.</span><span class="n">quantile</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>29.6
-</pre></div>
-</div>
-</div>
-</div>
-<ol class="simple">
-<li><p>Kemiringan / Skewned</p></li>
-</ol>
-<p>Skewned tingkat ketidaksimetrisan atau kejauhan simetri dari sebuah distribusi. Skewness diartikan sebagai kemiringan distribusi data. Sebuah distribusi yang tidak simetris akan memiliki rata-rata, median, dan modus yang tidak sama besarnya sehingga distribusi akan terkonsentrasi pada salah satu sisi dan kurvanya akan menceng</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">Yield</span><span class="o">.</span><span class="n">skew</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.46210360456902855
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">Yield</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/seaborn/distributions.py:2619: FutureWarning: `distplot` is a deprecated function and will be removed in a future version. Please adapt your code to use either `displot` (a figure-level function with similar flexibility) or `histplot` (an axes-level function for histograms).
-  warnings.warn(msg, FutureWarning)
-</pre></div>
-</div>
-<img alt="_images/notebooks_19_1.png" src="_images/notebooks_19_1.png" />
-</div>
-</div>
-</section>
 
     <script type="text/x-thebe-config">
     {
@@ -867,20 +712,6 @@ Untuk banyaknya data <span class="math notranslate nohighlight">\((n)\)</span> g
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Welcome to your Jupyter Book</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="tugas2.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><strong>Deskritisasi</strong></p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
             </footer>
         </div>
